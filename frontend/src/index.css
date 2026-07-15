@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+html,
+body,
+#root {
+    height: 100%;
+    overflow: hidden;
+    background-color: #030712;
+}
+
+@media print {
+  /* Light document for print */
+  body, html {
+    background: white !important;
+    color: black !important;
+  }
+
+  .prose-invert {
+    --tw-prose-body: black;
+    --tw-prose-headings: black;
+    --tw-prose-bold: black;
+    --tw-prose-bullets: black;
+    --tw-prose-counters: black;
+    --tw-prose-links: black;
+    --tw-prose-quotes: black;
+  }
+
+  html, body, #root {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .h-screen,
+  .overflow-hidden,
+  .overflow-y-auto,
+  .overflow-x-hidden {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Strip every dark background */
+  [class*="bg-gray-"], [class*="bg-black"] {
+    background: white !important;
+  }
+
+  /* Force light text dark */
+  [class*="text-white"],
+  [class*="text-gray-3"],
+  [class*="text-gray-4"] {
+    color: black !important;
+  }
+
+  /* Mid-grey for summaries, metadata, timestamps */
+  [class*="text-gray-5"],
+  [class*="text-gray-6"],
+  [class*="text-gray-7"] {
+    color: #555 !important;
+  }
+
+  /* Keep the AI badge legible but printer-friendly */
+  .bg-amber-900 { background: #fef3c7 !important; }
+  .text-amber-300 { color: #92400e !important; }
+
+  /* Faint borders rather than dark ones */
+  [class*="border-"] {
+    border-color: #ddd !important;
+  }
+
+  /* Don't split a section card across two pages */
+  .mb-4 {
+    break-inside: avoid;
+  }
+
+  /* Stop browsers auto-stripping colours */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

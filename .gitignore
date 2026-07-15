@@ -1,0 +1,56 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Application data
+data/
+uploads/
+backend/data/
+backend/uploads/
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Audio and video uploads
+*.mp3
+*.wav
+*.m4a
+*.aac
+*.flac
+*.ogg
+*.mp4
+*.mov
+*.webm
+
+# Operating system and editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
