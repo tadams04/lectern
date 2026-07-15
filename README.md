@@ -305,7 +305,7 @@ Lectern was developed as my final-year Computer Science project at the Universit
 
 The accompanying dissertation documents the research background, system architecture, implementation, testing, evaluation, ethics and future work.
 
-The complete dissertation will be available from the repository's latest GitHub release.
+The complete dissertation is available in the [latest GitHub release](https://github.com/tadams04/lectern/releases/latest).
 
 ## Limitations
 
